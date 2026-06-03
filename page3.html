@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>SELO Page 3 - Qualitative Results and Role</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="topbar">
+    <nav class="nav">
+      <a class="brand" href="index.html">SELO Demo page</a>
+      <div class="links">
+        <a href="index.html">Main</a>
+        <a href="page1.html">Page 1</a>
+        <a href="page2.html">Page 2</a>
+        <a class="active" href="page3.html">Page 3</a>
+        <a href="docs/SELO_Portfolio_first3pages.pdf">PDF</a>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="page-title">
+      <p class="kicker">Page 3</p>
+      <h1>Qualitative Results, Role, and Next Step</h1>
+      <p class="lede">Qualitative examples compare adapted regions and remaining false negatives. The page also summarizes the research role and the next extension toward TTA with stronger semantic priors.</p>
+    </section>
+
+    <section>
+      <figure class="image-card">
+        <img src="assets/qualitative_strip.png" alt="Qualitative segmentation results with adapted and false negative regions">
+        <figcaption>Qualitative results from the portfolio. Adapted regions are highlighted in yellow and false negatives in green.</figcaption>
+      </figure>
+    </section>
+
+    <section>
+      <div class="gallery">
+        <figure class="image-card">
+          <img src="assets/before_sample_1.png" alt="Before sample image for adverse night scene">
+          <figcaption>Uploaded before sample 1.</figcaption>
+        </figure>
+        <figure class="image-card">
+          <img src="assets/before_sample_2.png" alt="Before sample image for adverse night scene duplicate">
+          <figcaption>Uploaded before sample 2.</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section>
+      <div class="grid two">
+        <article class="card">
+          <h3>My Role</h3>
+          <p>Defined the research question, implemented the training and evaluation pipeline, designed ablations, analyzed failure cases, and reformulated the next research direction.</p>
+        </article>
+        <article class="card">
+          <h3>Next Step</h3>
+          <p>Extend the project toward test time adaptation with lightweight adapters and stronger semantic priors. Explore feature channel axis alignment between DINOv3 and the SegFormer decoder.</p>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <main><a class="button" href="index.html">Back to Main</a></main>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>SELO Page 1 - Problem and Setup</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="topbar">
+    <nav class="nav">
+      <a class="brand" href="index.html">SELO Demo page</a>
+      <div class="links">
+        <a href="index.html">Main</a>
+        <a class="active" href="page1.html">Page 1</a>
+        <a href="page2.html">Page 2</a>
+        <a href="page3.html">Page 3</a>
+        <a href="docs/SELO_Portfolio_first3pages.pdf">PDF</a>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="page-title">
+      <p class="kicker">Page 1</p>
+      <h1>Problem, Setup, and Research Direction</h1>
+      <p class="lede">The first page frames the research question: how to keep semantic segmentation reliable when clear weather training no longer matches fog, rain, snow, and night test conditions.</p>
+    </section>
+
+    <section>
+      <div class="grid">
+        <article class="card">
+          <h3>Dataset</h3>
+          <p>ACDC adverse weather images are used to evaluate semantic segmentation under realistic urban distribution shift.</p>
+        </article>
+        <article class="card">
+          <h3>Baseline</h3>
+          <p>SegFormer provides the segmentation baseline and the intermediate stage features for adaptation analysis.</p>
+        </article>
+        <article class="card">
+          <h3>Direction</h3>
+          <p>Feature alignment and DINOv3 semantic priors are used to improve robustness without fully retraining the segmentation model.</p>
+        </article>
+      </div>
+    </section>
+
+    <section>
+      <figure class="image-card">
+        <img src="assets/feature_comparison.png" alt="Original image with SegFormer and DINO feature map comparison">
+        <figcaption>Uploaded visual comparison. DINO gives a stronger semantic response around the salient object under night driving, motivating the use of foundation model priors.</figcaption>
+      </figure>
+    </section>
+  </main>
+
+  <footer>
+    <main><a class="button" href="page2.html">Next: Method and Results</a></main>
+  </footer>
+</body>
+</html>

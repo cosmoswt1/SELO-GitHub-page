@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>SELO Page 2 - Method and Results</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="topbar">
+    <nav class="nav">
+      <a class="brand" href="index.html">SELO Demo page</a>
+      <div class="links">
+        <a href="index.html">Main</a>
+        <a href="page1.html">Page 1</a>
+        <a class="active" href="page2.html">Page 2</a>
+        <a href="page3.html">Page 3</a>
+        <a href="docs/SELO_Portfolio_first3pages.pdf">PDF</a>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="page-title">
+      <p class="kicker">Page 2</p>
+      <h1>Method and Quantitative Diagnostics</h1>
+      <p class="lede">The model keeps the baseline segmentation path frozen and updates only a lightweight adapter and gate on stage 3 features. DINOv3 remains frozen and supplies the semantic prior for feature alignment.</p>
+    </section>
+
+    <section class="figure-stack">
+      <figure class="image-card">
+        <img src="assets/method_overview.png" alt="SELO method overview diagram">
+        <figcaption>Only the stage 3 adapter and gate are updated during adaptation.</figcaption>
+      </figure>
+      <figure class="image-card">
+        <img src="assets/local_cka.png" alt="Local CKA trend during 5 epochs">
+        <figcaption>Local CKA trend during five epochs. The alignment signal rises from early adaptation and then stabilizes with step level noise.</figcaption>
+      </figure>
+      <figure class="image-card">
+        <img src="assets/miou_chart.png" alt="mIoU after 10 epochs for baseline and adapted model">
+        <figcaption>mIoU after ten epochs. The adapted model improves overall score by about +1.20 mIoU and shows point scale gains across fog, night, rain, and snow.</figcaption>
+      </figure>
+    </section>
+  </main>
+
+  <footer>
+    <main><a class="button" href="page3.html">Next: Qualitative Results</a></main>
+  </footer>
+</body>
+</html>

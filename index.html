@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>SELO Demo page</title>
+  <meta name="description" content="SELO project page for robust semantic segmentation under adverse weather distribution shift.">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="topbar">
+    <nav class="nav">
+      <a class="brand" href="index.html">SELO Demo page</a>
+      <div class="links">
+        <a class="active" href="index.html">Main</a>
+        <a href="page1.html">Page 1</a>
+        <a href="page2.html">Page 2</a>
+        <a href="page3.html">Page 3</a>
+        <a href="docs/SELO_Portfolio_first3pages.pdf">PDF</a>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div>
+        <p class="kicker">Robust Perception Under Distribution Shift</p>
+        <h1>SELO: Robust Semantic Segmentation under Adverse Weather</h1>
+        <p class="lede">A lightweight adaptation study for urban semantic segmentation under fog, rain, snow, and night. The project uses SegFormer as the segmentation baseline, DINOv3 as a frozen semantic prior, and local feature alignment diagnostics to improve robustness while preserving semantic consistency.</p>
+        <div class="actions">
+          <a class="button primary" href="page2.html">View Method and Results</a>
+          <a class="button" href="page3.html">View Qualitative Samples</a>
+          <a class="button" href="docs/SELO_Portfolio_first3pages.pdf">Download Project PDF</a>
+        </div>
+      </div>
+      <figure class="panel">
+        <img src="assets/feature_comparison.png" alt="Original image, SegFormer feature map, and DINO feature map comparison">
+        <figcaption>Teaser comparison. Original night driving image with SegFormer and DINO feature responses.</figcaption>
+      </figure>
+    </section>
+
+    <section>
+      <div class="grid">
+        <article class="card">
+          <h3>Problem</h3>
+          <p>Segmentation models trained on clear urban scenes degrade sharply when weather and illumination change. The failure mode differs by condition, so a single uniform constraint is not enough.</p>
+        </article>
+        <article class="card">
+          <h3>Setup</h3>
+          <p>ACDC is used as the adverse weather benchmark. SegFormer is the baseline. DINOv3 provides a frozen semantic prior for feature level alignment.</p>
+        </article>
+        <article class="card">
+          <h3>Goal</h3>
+          <p>Improve adverse weather robustness with a small adaptation module while keeping the backbone path frozen and preserving semantic consistency.</p>
+        </article>
+      </div>
+    </section>
+
+    <section>
+      <div class="section-card">
+        <h2>Method Overview</h2>
+        <p>SELO freezes the SegFormer baseline path and updates only a trainable stage 3 adapter and gate. DINOv3 features are used as a semantic prior, and local CKA alignment is used to diagnose whether the adapted features stay structurally aligned under distribution shift.</p>
+        <figure class="image-card">
+          <img src="assets/method_overview.png" alt="Method overview diagram for SELO">
+          <figcaption>SegFormer baseline adapted with local feature alignment to a frozen vision foundation model prior.</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section>
+      <div class="grid two">
+        <article class="card metric">
+          <h3>Local CKA</h3>
+          <strong>10 spatial windows</strong>
+          <p>Tracks feature correspondence patterns across stages and weather conditions during adaptation.</p>
+        </article>
+        <article class="card metric">
+          <h3>mIoU Trend</h3>
+          <strong>+1.20 overall mIoU</strong>
+          <p>The 10 epoch summary shows positive gains overall and across fog, night, rain, and snow.</p>
+        </article>
+      </div>
+    </section>
+
+    <section>
+      <div class="section-card">
+        <h2>Review Pages</h2>
+        <div class="grid">
+          <article class="card">
+            <h3>Page 1</h3>
+            <p>Problem definition, setup, and method summary for adverse weather segmentation.</p>
+            <a class="button" href="page1.html">Open Page 1</a>
+          </article>
+          <article class="card">
+            <h3>Page 2</h3>
+            <p>Method overview, local CKA trend, and mIoU results after 10 epochs.</p>
+            <a class="button" href="page2.html">Open Page 2</a>
+          </article>
+          <article class="card">
+            <h3>Page 3</h3>
+            <p>Qualitative results, project role, and next research direction.</p>
+            <a class="button" href="page3.html">Open Page 3</a>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <main>SELO Project Page. Built for GitHub Pages as a static HTML site.</main>
+  </footer>
+</body>
+</html>
